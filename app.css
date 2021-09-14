@@ -12,6 +12,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: color background;
+  transition-duration: 0.0s;
+
 }
 
 #page-container {
@@ -19,8 +22,9 @@ body {
   width: 70%;
   display: grid;
   grid-template:
-    "nav" 1fr
-    "carousel" 4fr;
+  "nav" 1fr
+  "carousel" 4fr;
+  animation: smooth 0.5s ease-in;
 }
 
 nav {
@@ -29,6 +33,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background: transparent;
 }
 
 nav > a {
@@ -56,11 +61,15 @@ main {
 
 h1 {
   font-size: 7rem;
+  transition-property: color;
+  transition-duration: 0.0s;
 }
 
 h1 > span {
   color: aqua;
   text-shadow: 0 0 1px slategrey;
+  transition-property: color;
+  transition-duration: 0.5s;
 }
 
 p {
@@ -78,12 +87,27 @@ button {
   border: none;
 }
 
-.dark {
+body.dark,
+#prev.dark,
+#next.dark {
   background: black;
   color: slategrey;
+  transition-property: color;
+  transition-duration: 0.5s;
 }
 
 .spanDark {
   background: black;
   color: magenta;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+
+@keyframes smooth {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1.0;
+  }
 }
