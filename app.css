@@ -3,13 +3,18 @@
 }
 
 body {
+  font-family: 'Space Grotesk', sans-serif;
   height: 100vh;
   background: linear-gradient(white, slategrey);
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #page-container {
   height: 100vh;
+  width: 70%;
   display: grid;
   grid-template:
     "nav" 1fr
@@ -24,10 +29,42 @@ nav {
   align-items: center;
 }
 
+nav > a {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav > a:visited {
+  color: black;
+}
+
 main {
   grid-area: carousel;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h1 > span {
+  color: aqua;
+  text-shadow: 0 0 1px slategrey;
+}
+
+p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+button {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
 }
