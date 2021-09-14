@@ -9,13 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let index = 0;
 
-  prev.addEventListener('click', () => {
-    if (index === 0) {
-      index = sections.length - 1;
-    } else {
-      index--;
-    }
-    location.innerText = sections[index].innerText;
+  function darkMode() {
     if (location.innerText === "grave") {
       body.classList.add('dark');
       next.classList.add('dark');
@@ -29,6 +23,16 @@ window.addEventListener("DOMContentLoaded", () => {
       navigation.classList.remove('dark');
       location.classList.remove('spanDark');
     }
+  }
+
+  prev.addEventListener('click', () => {
+    if (index === 0) {
+      index = sections.length - 1;
+    } else {
+      index--;
+    }
+    location.innerText = sections[index].innerText;
+    darkMode();
   })
 
   next.addEventListener('click', () => {
@@ -38,20 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
       index++;
     }
     location.innerText = sections[index].innerText;
-    if (location.innerText === "grave") {
-      body.classList.add('dark');
-      next.classList.add('dark');
-      prev.classList.add('dark');
-      navigation.classList.add('dark');
-      location.classList.add('spanDark');
-    } else {
-      body.classList.remove('dark');
-      next.classList.remove('dark');
-      prev.classList.remove('dark');
-      navigation.classList.remove('dark');
-      location.classList.remove('spanDark');
-    }
-
+    darkMode();
   })
 
   location.addEventListener('change', () => {
