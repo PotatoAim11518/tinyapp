@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(white, slategrey);
+  background-size: cover;
+}
+
+#page-container {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "nav" 1fr
+    "carousel" 4fr;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main {
+  grid-area: carousel;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
