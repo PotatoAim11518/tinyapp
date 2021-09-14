@@ -12,8 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: color background;
-  transition-duration: 0.0s;
+  transition-property: color, background;
+  transition-duration: 0.5s;
 
 }
 
@@ -87,17 +87,21 @@ button {
   border: none;
 }
 
-body.dark,
+body.dark {
+background: black;
+color: slategrey;
+transition-property: background;
+transition-duration: 0.5s;
+}
+
 #prev.dark,
 #next.dark {
-  background: black;
   color: slategrey;
   transition-property: color;
   transition-duration: 0.5s;
 }
 
 .spanDark {
-  background: black;
   color: magenta;
   transition-property: color;
   transition-duration: 0.5s;
