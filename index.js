@@ -8,15 +8,23 @@ window.addEventListener("DOMContentLoaded", () => {
   let index = 0;
 
   prev.addEventListener('click', () => {
-    if (index === 0) index = sections.length - 1;
-    index--;
+    if (index === 0) {
+      index = sections.length - 1;
+    } else {
+      index--;
+    }
     location.innerText = sections[index].innerText;
   })
 
   next.addEventListener('click', () => {
-    if (index === sections.length - 1) index = 0;
-    index++;
+    if (index === sections.length - 1) {
+      index = 0
+    } else {
+      index++;
+    }
     location.innerText = sections[index].innerText;
   })
+
+
 
 })
